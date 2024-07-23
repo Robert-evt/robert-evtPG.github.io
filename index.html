@@ -41,7 +41,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ message: 'Кнопка была нажата' })
+                body: JSON.stringify({ send_text: 'Привет!!' })
             })
             .then(response => response.json())
             .then(data => console.log('Сообщение отправлено успешно:', data))
