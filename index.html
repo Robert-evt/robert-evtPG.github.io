@@ -36,15 +36,16 @@
     </div>
     <script>
         document.getElementById('sendMessageBtn').addEventListener('click', function() {
-            fetch('https://your-make-webhook-url', {
+            fetch('https://hook.us1.make.com/ib5v8jmtpmo8ypl4xaicsw1y2t6ssoec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ message: 'Отправка сообщения через кнопку' })
-            }).then(response => response.json())
-              .then(data => console.log('Message sent successfully:', data))
-              .catch(error => console.error('Error sending message:', error));
+                body: JSON.stringify({ message: 'Кнопка была нажата' })
+            })
+            .then(response => response.json())
+            .then(data => console.log('Сообщение отправлено успешно:', data))
+            .catch(error => console.error('Ошибка при отправке сообщения:', error));
         });
     </script>
 </body>
